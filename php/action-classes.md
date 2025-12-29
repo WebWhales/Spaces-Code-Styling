@@ -56,5 +56,9 @@ class ImportProductAction
 }
 ```
 
+> **ℹ️ Note:** Depending on the size of the action class, multiple action classes using a trait to insert the product would also be a good solution here.
+
 ## Must see video reference
+
+https://www.youtube.com/watch?v=0Rq-yHAwYjQ&t=1699
 

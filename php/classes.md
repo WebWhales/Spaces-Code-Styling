@@ -2,6 +2,8 @@
 
 ## Naming conventions
 
+> **ℹ️ Note:** For this section, I will refer to the naming conventions used within Laravel. Note that I will be mentioning the name of the file, keeping in mind that the files comply with PSR-4 (where the name of the file is the same as the class). 
+
 **Laravel specific**
 
 In Laravel, we have various files very frequent in an application with different purposes, to have an idea of the organization of these files we can see in the [official Laravel documentation](https://laravel.com/docs/master/structure).
@@ -350,6 +352,10 @@ When developing a class, SRP must be considered. As the name suggests, each clas
 
 As previously mentioned in the [function guide](https://webwhales.teamwork.com/spaces/programmeren/page/5148-functions#one-purpose-single-responsibility-principle), here we can use the same example, logically in the context of a class.
 
+> **ℹ️ Note:** Example: In a webshop system, when a new order is placed, an order is created in the system and a confirmation email is sent to the customer. For creating the order, there is a separate class, where the SRP of this class are the orders. For sending the mail is also a separate class created, when creating the order this class can be called to send the mail.
+
+> **⚠️ Warning:** Notice: Implementing this principle creates many small classes, however, the classes should not be dependent on each other. With the above example, it should not be that the Mail class is only implementable within the OrderClass.
+
 ---
 
 ## Organize for change or Open-Close Principle (OCP)
@@ -418,4 +424,6 @@ $reportGenerator = new ReportGenerator($excelReport);
 $reportGenerator->generateReport();
 
 ```
+
+> **ℹ️ Note:** Example: If you have a class that handles functions concerning inputs, it could be that this was all put inside a class (i.e., all type of inputs that were needed). In case a new input is needed in the future, every switch, if statement, etc. must be checked and adjusted to make sure the new input works. Instead, you can also set up an (abstract) parent class that handles the general functions without depending on what type of input is involved. Then all other inputs can get their own class that extends on the parent. This way, a new input never affects the other inputs and your code is a lot easier to change.
 

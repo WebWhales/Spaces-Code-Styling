@@ -14,7 +14,11 @@ Usually, if a function is too large, there is a good chance that the function br
 
 ### **One purpose (Single Responsibility Principle)**
 
+> **ℹ️ Note:** Although SRP was fundamental for OOP (object-oriented programming), we can still use it in the context of functional/structural programming.
+
 A function should have a responsibility. When a function performs multiple tasks, it is better to split these functions whenever possible.
+
+> **ℹ️ Note:** In the following examples, in addition to demonstrating the Single Responsibility Principle, I have done some other bad practices to see if you can identify them. These examples are only meant to encourage visualizing code and identifying bad practices. Think about the possible improvements that can be made in the code and reflect on them. Those topics will be covered throughout this guide. A little help: \* think about the names of variables and functions \* type declaration \* documentation \* etc Leave your comment with possible changes.
 
  **Wrong:**
 
@@ -91,6 +95,8 @@ function addProductAttributes(array &$productData, Product $product, array $fiel
 }
 ```
 
+> **⚠️ Error:** Above, 5 different parameters are used. The definition of the function now reads relatively with difficulty.
+
  **Correct:**
 
 ```php
@@ -99,6 +105,8 @@ function addProductAttributes(Product $product): void
     // Do something.
 }
 ```
+
+> **ℹ️ Note:** Of course now this function will no longer work; after all, the parameters were needed. Within the \$product object, the information will have to be processed so it no longer needs to be passed to the function. So in the above correct example, we assume that the productAttributes we are going to add to the product are already set within the \$product object. Now, limiting functions to only 1 parameter is not practical in most cases. Try to stick to a maximum of 3 parameters. Of course, it may happen that it is unavoidable, it is good to realize that it does really only lend itself to that situation.
 
 ---
 
@@ -352,4 +360,6 @@ public function updateCustomerAccount( User $user, array $formData = [] ):bool {
     // Do something.
 } 
 ```
+
+> **ℹ️ Note:** Hier is gebruik gemaakt van User, array en bool.
 

@@ -164,6 +164,8 @@ For class-based casts (like Spatie Data or custom cast):
 
 ### Important Clarification
 
+> **⚠️ Warning:** Laravel does NOT detect internal changes to a casted object.
+
 Writing inside the object does NOT trigger serialization:
 
 ```php

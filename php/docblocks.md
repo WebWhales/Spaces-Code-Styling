@@ -42,6 +42,8 @@ Problems here:
 - `@param string $name` and `@return bool` repeat what is already in the signature.
 - The only useful extra information is that `$users` is an array of `User`.
 
+> **⚠️ Warning:** Clarifying the function within the DocBlock is only important when it also adds something.
+
  **Correct:**
 
 Keep only the DocBlock parts that add extra value.

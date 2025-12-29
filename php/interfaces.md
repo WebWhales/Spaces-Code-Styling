@@ -79,6 +79,8 @@ interface FeatureFlagStore {
 
 An interface adds complexity; you can always extract one later if needed.
 
+> **ℹ️ Note:** A commonly cited policy states that all services must have an interface, but this is not good practice because it adds unnecessary complexity to the codebase.
+
 ```php
 // Unnecessary interface + class pair for a simple service
 interface Slugger {

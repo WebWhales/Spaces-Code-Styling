@@ -1,5 +1,7 @@
 # Enums
 
+> **ℹ️ Note:** Enums are available on PHP 8.1 and higher.
+
 Enums must be used when you need a predefined list of values. For this purpose enums are also a replacement for (class) constants.
 
 ## Naming conventions

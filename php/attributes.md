@@ -79,10 +79,14 @@ public int $id;
 class User {}
 ```
 
+> **⚠️ Error:** Attributes should never perform runtime operations, I/O, or heavy computations. They should only hold data. The system using them decides when and how to act.
+
 ```php
 #[Cache(ttl: time() + 3600)]
 function fetchUsers() {}
 ```
+
+> **⚠️ Error:** Attribute arguments should be static, deterministic values (scalars, arrays, constants, or class names). You should not perform calculations or call functions inside them.
 
 **Use attributes when:**
 

@@ -4,6 +4,8 @@
 
 In a Laravel project, we use `resources/js` a directory to serve as the main entry point for js (analogous to a `src` folder in JS standard). Organize it by domain/feature. A clear, scalable structure could look like:
 
+> **ℹ️ Note:** The main difference between Domain and Feature is that domain can contain various features of a specific business logic.
+
 ```python
 resources/js/
 ├── Components/           # Reusable presentation components
@@ -92,6 +94,8 @@ One of the solutions can be an [Atomic Design](https://bradfrost.com/blog/post/a
 - **Organisms**
     More complex, self-contained sections made of atoms and molecules: a navigation bar, a user profile card, a data table. Typically, these files can be moved to the specific domain/feature folder `Components/<Domain/Feature>`.
 
+> **ℹ️ Note:** The Atomic Design also mentions template (layout) and pages. Those are already covered by the file structure at the beginning.
+
 ```python
 resources/js/Components/Base/
 ├── Atoms/
@@ -125,6 +129,8 @@ resources/js/Components/Base/
 ### Composables & Stores Growth
 
 Split by domain/feature.
+
+> **ℹ️ Note:** This only applies to the Composables and Stores folders.
 
 A **hook** and a **composable** play the same role. There are a few differences, which are more semantic.
 
@@ -229,6 +235,8 @@ Expose only refs, reactive objects, computed, and functions. Encapsulate watcher
 ### Composables as global state
 
 Composables can be used to cache and reuse logic, and also it can be used as an internal (global) state.
+
+> **ℹ️ Note:** If you're going to have a big global state, consider using Pinia.
 
 ```javascript
 // resources/js/Composables/useCountries.js

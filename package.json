@@ -1,6 +1,6 @@
 {
   "name": "@webwhales/spaces-code-styling",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Code styling and best practices documentation for AI agents. Contains comprehensive guidelines for PHP and JavaScript development.",
   "main": "index.js",
   "type": "module",

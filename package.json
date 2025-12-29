@@ -1,0 +1,28 @@
+{
+  "name": "@webwhales/spaces-code-styling",
+  "version": "1.0.0",
+  "description": "Code styling and best practices documentation for AI agents. Contains comprehensive guidelines for PHP and JavaScript development.",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [
+    "code-style",
+    "documentation",
+    "ai-agent",
+    "php",
+    "javascript",
+    "best-practices",
+    "coding-standards"
+  ],
+  "author": "Bas van Dijk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webwhales/spaces-code-styling.git"
+  },
+  "files": [
+    "index.js",
+    "php/",
+    "javascript/"
+  ]
+}
+

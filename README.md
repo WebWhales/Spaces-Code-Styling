@@ -6,28 +6,16 @@ A comprehensive code styling and best practices documentation package designed f
 
 ### Composer (PHP)
 
-Add the repository to your project's `composer.json`:
+Install the Spaces Code Styling composer package using the following commands:
 
-```json
-{
-  "repositories": {
-    "webwhales/spaces-code-styling": {
-      "type": "github",
-      "url": "https://github.com/WebWhales/Spaces-Code-Styling"
-    }
-  },
-  "require-dev": {
-    "webwhales/spaces-code-styling": "dev-master"
-  }
-}
-```
-
-Then run:
-```bash
-composer update webwhales/spaces-code-styling
+```shell
+composer config repositories.spaces-code-styling github https://github.com/WebWhales/Spaces-Code-Styling
+composer require --dev webwhales/spaces-code-styling:dev-master
 ```
 
 ### NPM (JavaScript)
+
+Install the Spaces Code Styling npm package using the following command:
 
 ```bash
 npm install @webwhales/spaces-code-styling

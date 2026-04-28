@@ -11,7 +11,7 @@ Add the repository to your project's `composer.json`:
 ```json
 {
   "repositories": {
-    "spaces-code-styling": {
+    "webwhales/spaces-code-styling": {
       "type": "github",
       "url": "https://github.com/WebWhales/Spaces-Code-Styling"
     }
